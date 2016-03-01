@@ -22,11 +22,13 @@ A: Places to start:
 
 #### Installation
 
+NOTE:  Currently does not work!  Do not install yet.
+
 You need [node.js](http://nodejs.org/).  Then:
 
     cd /usr/local/src
     git clone https://github.com/GeoVisionEnvironmental/cdbmvtiles.git
-    cd to cdbmvtiles dir
+    cd cdbmvtiles
     npm install -g 
 
 #### Usage
