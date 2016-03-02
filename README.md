@@ -22,7 +22,7 @@ A: Places to start:
 
 #### Installation
 
-NOTE:  Currently does not work!  Do not install yet.
+NOTE: MVT usage not supported yet!  Currently only supports raster tiles with pre-fork code.
 
 You need [node.js](http://nodejs.org/).  Then:
 
@@ -50,7 +50,7 @@ The `copy` command above is a sample application provided by tilelive.js, and it
 
 Important limitation: Currently cdbmvtiles automatically clears (as in destroys and rebuilds) the destination database. So you can't use this to copy multiple different tilesets into the same DB, or update just part of a tileset. It is not recommended to keep any other JSON documents in the same DB as your map tiles! You have been warned.
 
-Now, if you point a [Openlayers](http://openlayers.org, [Mapbox GL](http://mapbox.com) or [Leaflet](http://leafletjs.com/) enabled app/web page to `http://127.0.0.1:5984/columbus_tiles/tile_{z}_{x}_{y}/tile` you'll be serving up map tiles from CouchDB.  Put that webpage in your CouchDB, and you now have a self-contained map/application server running on CouchDB.
+Now, if you point a [Openlayers](http://openlayers.org), [Mapbox GL](http://mapbox.com) or [Leaflet](http://leafletjs.com/) enabled app/web page to `http://127.0.0.1:5984/columbus_tiles/tile_{z}_{x}_{y}/tile` you'll be serving up map tiles from CouchDB.  Put that webpage in your CouchDB, and you now have a self-contained map/application server running on CouchDB.
 
 This also lets you serve up the [TileJSON](https://github.com/mapbox/tilejson-spec) information for your maps, just use: `http://127.0.0.1:5984/columbus_tiles/tilejson`
 

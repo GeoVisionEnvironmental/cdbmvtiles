@@ -1,11 +1,11 @@
 {
-  "name": "cdbtiles",
-  "version": "0.0.4",
-  "description": "cdbtiles is a tilelive backend plug-in for CouchDB",
+  "name": "cdbmvtiles",
+  "version": "16.3.2",
+  "description": "cdbmvtiles is a tilelive backend plug-in for CouchDB",
   "main": "index.js",
   "dependencies": {
-    "tilelive": "~4.5.3",
-    "nano": "~4.2.1"
+    "tilelive": ">=4.5.3",
+    "nano": ">=4.2.1"
   },
   "devDependencies": {},
   "scripts": {
@@ -19,7 +19,7 @@
     "couchdb",
     "tilelive",
     "tilejson",
-    "tilemill",
+    "mapbox studio",
     "mbtiles",
     "map",
     "server"
@@ -29,8 +29,8 @@
   },
   "readmeFilename": "README.md",
   "bugs": {
-    "url": "https://github.com/vsivsi/cdbtiles/issues"
+    "url": "https://github.com/GeoVisionEnvironmental/cdbmvtiles/issues"
   },
-  "author": "Vaughn Iverson",
+  "author": "Peter Sprague, Vaughn Iverson",
   "license": "MIT/X11"
 }
