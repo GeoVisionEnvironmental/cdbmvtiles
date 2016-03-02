@@ -49,7 +49,6 @@
   protocol = 'cdbtiles';
   
   // added components to provide Mapbox Vector Tiles usage
-  
   //protocol = 'cdbmvtiles';
   //tilelive-vector = require('tilelive-vector');
 
