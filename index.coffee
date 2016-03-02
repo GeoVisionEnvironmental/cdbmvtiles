@@ -1,4 +1,5 @@
 ###
+# Not used. Reminant from original cdtiles before fork
 #
 # Copyright (C) 2013 by Vaughn Iverson
 #

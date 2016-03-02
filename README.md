@@ -22,7 +22,7 @@ A: Places to start:
 
 #### Installation
 
-NOTE:  Currently does not work!  Do not install yet.
+NOTE: MVT usage not supported yet!  Currently only supports raster tiles with pre-fork code.
 
 You need [node.js](http://nodejs.org/).  Then:
 
