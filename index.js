@@ -4,7 +4,7 @@
 # Copyright (C) 2013 by Vaughn Iverson
 # Copyright (C) 2016 by GeoVision Environmental Informatics
 #
-# cdbmvtiles
+# cdbtiles
 #
 # With this you can use a CouchDB as a "tilelive.js" source or sink for
 # map tile / grid / tilejson data.
@@ -45,12 +45,12 @@
   url = require('url');
   tilelive = require('tilelive');
   nano = require('nano');
-  
   protocol = 'cdbtiles';
   
   // added components to provide Mapbox Vector Tiles usage
-  //protocol = 'cdbmvtiles';
-  //tilelive-vector = require('tilelive-vector');
+  tilelive-vector = require('tilelive-vector');
+  tilelive-bridge = require('tilelive-bridge');
+  
 
   tile_name = function(z, x, y) {
     if ((x != null) && (y != null) && (z != null)) {
@@ -89,9 +89,14 @@
       return 'image/jpeg';
     } else if (bytes[0] === 0x47 && bytes[1] === 0x49 && bytes[2] === 0x46 && bytes[3] === 0x38 && (bytes[4] === 0x39 || bytes[4] === 0x37) && bytes[5] === 0x61) {
       return 'image/gif';
+    
+    // MVT pbf  
+    //} else if 
+    //  return 'image/pbf';
     } else {
       console.warn("" + protocol + ": Image data with unknown MIME type in putTile call to get_mime_type.");
       return 'application/octet-stream';
+      //return 'image/pbf';
     }
   };
 
@@ -99,7 +104,11 @@
     Tilecouch.registerProtocols = function(tilelive) {
       return tilelive.protocols["" + protocol + ":"] = this;
     };
-
+    
+    Tilecouch.registerProtocols = function(tilelive-mapnik) {
+      return tilelive.protocols["" + protocol + ":"] = this;
+    };
+    
     Tilecouch.list = function(filepath, callback) {
       return callback(new Error(".list not implemented for " + protocol));
     };

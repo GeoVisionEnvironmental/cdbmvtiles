@@ -1,9 +1,9 @@
-cdbmvtiles
+cdbtiles
 ==============================
 
 This is a fork of the original cdbtiles, with added ability to import Mapbox Vector Tiles to CouchDB database.
 
-cdbmvtiles is a [tilelive.js](https://github.com/mapbox/tilelive.js) backend (source/sink) plug-in for [CouchDB](https://couchdb.apache.org/)
+cdbtiles is a [tilelive.js](https://github.com/mapbox/tilelive.js) backend (source/sink) plug-in for [CouchDB](https://couchdb.apache.org/)
 
 Q: What does that mean?
 
@@ -27,8 +27,8 @@ NOTE: MVT usage not supported yet!  Currently only supports raster tiles with pr
 You need [node.js](http://nodejs.org/).  Then:
 
     cd /usr/local/src
-    git clone https://github.com/GeoVisionEnvironmental/cdbmvtiles.git
-    cd cdbmvtiles
+    git clone https://github.com/GeoVisionEnvironmental/cdbtiles.git
+    cd cdbtiles
     npm install -g 
 
 #### Usage
@@ -44,7 +44,7 @@ You should be able to easily copy all of your data from the .mbtiles file to you
 
 And then:
 
-     ./node_modules/tilelive/bin/tilelive-copy -s pyramid --minzoom=10 --maxzoom=18  "mbtiles:///Users/user/maps/Columbus.mbtiles" "cdbmvtiles://127.0.0.1:5984/columbus_tiles/"
+     ./node_modules/tilelive/bin/tilelive-copy -s pyramid --minzoom=10 --maxzoom=18  "mbtiles:///Users/user/maps/Columbus.mbtiles" "cdbtiles://127.0.0.1:5984/columbus_tiles/"
 
 The `copy` command above is a sample application provided by tilelive.js, and it has a bunch more options that you should check out. Tilelive is actually an API that any other app can use, so cdbtiles should enable CouchDB to play nicely with apps and other data sources/sinks that also support tilelive. The source and sink URIs have custom protocols (mbtiles: and cdbtiles:) that tilelive knows what to do with via the backend plugins you've now installed.
 
