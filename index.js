@@ -105,10 +105,6 @@
       return tilelive.protocols["" + protocol + ":"] = this;
     };
     
-    Tilecouch.registerProtocols = function(tilelive-mapnik) {
-      return tilelive.protocols["" + protocol + ":"] = this;
-    };
-    
     Tilecouch.list = function(filepath, callback) {
       return callback(new Error(".list not implemented for " + protocol));
     };
